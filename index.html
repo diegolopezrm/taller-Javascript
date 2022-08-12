@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Cronometro</title>
+</head>
+
+<style>
+    * {
+        margin: auto;
+        padding: 50;
+    }
+
+    body {
+        background-color: darkslategrey;
+    }
+
+    .block {
+        max-width: 1000px;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        margin-top: 5%;
+        background-color: white;
+        box-shadow: 0 0 5px rgb(15, 14, 14);
+        text-align: center;
+    }
+    h1 {
+        font-size: 100px;
+        font-family: 'Arial', Courier, monospace;
+        margin-top: 60px;
+        color: darkslategrey;
+    }
+    
+
+    button {
+        box-shadow: 3px 4px 0px 0px #1564ad;
+        
+        border-radius:5px;
+        border:1px solid #337bc4;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:17px;
+        font-weight:bold;
+        padding:12px 44px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #528ecc;
+    }
+
+    button:hover {
+        background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	    background-color:#378de5;
+    }
+
+    button:active {
+        position:relative;
+	    top:1px;
+    }
+
+    .bg-green {
+        background-color: green;
+    }
+    .bg-red {
+        background-color: red;
+    }
+
+    .bg-yellow {
+        background-color: yellow;
+    }
+
+</style>
+
+<body>
+
+    <div class="block">
+        <button onclick="iniciar();" class="bg-green">Iniciar/Continuar</button>
+        <button onclick="pausar();" class="bg-yellow">Pausar</button>
+        <button onclick="parar();" class="bg-red">Detener</button>
+        <h1 id="contador">0:0:0</h1>
+    </div>
+    <div class="block">
+        <div class="container">
+            <div class="inputcol">
+                <textarea name="text" class="textarea"></textarea>
+                <button type="button" class="buttoninput bg-green">Agregar</button>
+            </div>
+        </div>
+        <div class="todolist">
+            
+        </div>
+    </div>
+<script src="cronometro.js"></script>
+<script src="lista.js"></script>
+</body>
+
+</html>
